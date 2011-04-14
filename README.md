@@ -11,7 +11,7 @@ While there are other better ways of getting information from the running JVM an
 
 ### Installation
 
-1. Download [dist/id.war][war].
+1. Right-click to download [id.war][war].
 2. Copy it into the webapps directory in Tomcat or the appropriate place in your Java application server (assuming you have it configured to automatically extract/deploy war files).
 3. Using a browser or other means, make a request to the id webapp (for example: http://yourserver/id/ ) to see the host and domain of the server.
 
@@ -33,5 +33,5 @@ Then hit that webapp (for example: http://yourserver/id/ ) to see the host and d
 
 Copyright (c) 2010 Gary S. Weaver, released under the [MIT license][lic].
 
-[war]: http://github.com/garysweaver/id/blob/master/dist/id.war
+[war]: https://github.com/garysweaver/id/raw/master/dist/id.war
 [lic]: http://github.com/garysweaver/id/blob/master/LICENSE
