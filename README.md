@@ -9,25 +9,25 @@ While there are other better ways of getting information from the running JVM an
 
     <%= java.net.InetAddress.getLocalHost().getHostName() %>
 
-### Installation
+### Download
 
-1. Right-click to download [id.war][war].
-2. Copy it into the webapps directory in Tomcat or the appropriate place in your Java application server (assuming you have it configured to automatically extract/deploy war files).
-3. Using a browser or other means, make a request to the id webapp (for example: http://yourserver/id/ ) to see the host and domain of the server.
+Right-click to download [id.war][war].
+
+### Deploy
+
+Copy it into the webapps directory in Tomcat or the appropriate place in your Java application server (assuming you have it configured to automatically extract/deploy war files).
+
+### Use
+
+Using a browser or other means, make a request to the id webapp (for example: http://yourserver/id/ ) to see the host and domain of the server.
 
 ### Build
 
-Install Maven 2 then:
+If you need to build it, first install Maven 2 and Java, then use the command:
 
     mvn clean install
     
-The build war is in target/id.war
-
-### Deployment and Usage
-
-Deploy the war by copying into webapps directory in Tomcat (assuming you have it configured to automatically deploy).
-
-Then hit that webapp (for example: http://yourserver/id/ ) to see the host and domain of the server.
+The built war should be in target/id.war
 
 ### License
 
