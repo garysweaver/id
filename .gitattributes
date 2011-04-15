@@ -1,1 +1,1 @@
-*.war -crlf -diff -merge
+*.war -text
