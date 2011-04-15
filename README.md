@@ -43,18 +43,19 @@ e.g. in OS X 10.6 (Snow Leopard), to build with Java 1.4 on newer systems, you m
 
     export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/1.4/Home/
 
-To ensure the class was built in the version less or equal to the version of Java on the server:
+If you want to validate the version of Java, you can:
 
-1. Change your current directory to (webapps)/WEB-INF/classes/
+1. Change your current directory to the exploded war's (webapps)/id/WEB-INF/classes/jsp/ or cd to the target directory, unzip/unwar id.war, then cd WEB-INF/classes/jsp/.
+
 2. Use the command:
 
         javap -verbose index_jsp
-3. In the first several lines of the output you will see something like:
+3. In probably the tenth line of output you will see something like:
 
           minor version: 0
           major version: 48
 
-Use the table below to determine the version of Java the class was actually compiled in (from [Réal's How To][javaclassversion].):
+4. Match the major and minor version provided by javap to the table below to ensure the class was built in the version less or equal to the version of Java on the server (thanks to [Réal's How To][javaclassversion]):
 
     major  minor Java platform version 
     45       3           1.0
@@ -65,6 +66,8 @@ Use the table below to determine the version of Java the class was actually comp
     49       0           1.5 (5.0)
     50       0           1.6 (6.0)
     51       0           1.7 (7.0)
+
+5. If the major/minor version aren't the same or lower/compatible with the version of Java that the application server is using in Tomcat, then you might want to recompile the war with a newer version or use the non-precompiled version.
 
 ### License
 
