@@ -45,9 +45,12 @@ e.g. in OS X 10.6 (Snow Leopard), to build with Java 1.4 on newer systems, you m
 
 If you want to validate the version of Java, you can:
 
-1. Change your current directory to the exploded war's (webapps)/id/WEB-INF/classes/jsp/ or cd to the target directory, unzip/unwar id.war, then cd WEB-INF/classes/jsp/.
+1. Change your current directory to the exploded war's (webapps)/id/WEB-INF/classes/jsp/ or cd to the target directory, unzip/unwar id.war, then change directory into the compiled jsp directory, e.g.:
 
-2. Use the command:
+        cd target
+        unzip id.war
+        cd WEB-INF/classes/jsp/ 
+2. Use the command (make sure that a version of Java containing javap is in your PATH):
 
         javap -verbose index_jsp
 3. In probably the tenth line of output you will see something like:
