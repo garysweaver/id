@@ -37,7 +37,7 @@ If you need to build it, first install Maven 2 and Java, then use the command:
     
 The built war should be in target/id.war
 
-#### JSPC Precompilation
+#### Troubleshooting Precompiled JSP Issues
 
 By default, this compiles the JSP using the current version of Java available to Maven, which can be defined by JAVA_HOME. If you need to build the non-precompiled version, then remove the JSPC plugin section from the pom.xml before building.
 
