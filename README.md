@@ -37,13 +37,15 @@ If you need to build it, first install Maven 2 and Java, then use the command:
     
 The built war should be in target/id.war
 
+#### JSPC Precompilation
+
 By default, this compiles the JSP using the current version of Java available to Maven, which can be defined by JAVA_HOME. If you need to build the non-precompiled version, then remove the JSPC plugin section from the pom.xml before building.
 
 e.g. in OS X 10.6 (Snow Leopard), to build with Java 1.4 on newer systems, you must first [install Java 1.4][java4snowleopard], then use the following to set the Java version to 1.4 prior to build (if using bash, the default):
 
     export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/1.4/Home/
 
-If you want to validate the version of Java used to compile the JSP file in id.war, you can:
+To validate the version of Java used to compile the JSP:
 
 1. Change your current directory to the exploded war's (webapps)/id/WEB-INF/classes/jsp/ or cd to the target directory, unzip/unwar id.war, then change directory into the compiled jsp directory, e.g.:
 
