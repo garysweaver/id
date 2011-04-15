@@ -55,7 +55,7 @@ To ensure the class was built in the version less or equal to the version of Jav
     minor version: 0
     major version: 48
 
-Use the table below (in-part from [Réal's How To][javavertable]):
+Use the table below (in-part from [Réal's How To][javaclassversion]):
 
     major  minor Java platform version 
     45       3           1.0
