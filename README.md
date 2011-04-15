@@ -43,6 +43,29 @@ e.g. in OS X 10.6 (Snow Leopard), to build with Java 1.4 on newer systems, you m
 
    export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/1.4/Home/
 
+To ensure the class was built in the version less or equal to the version of Java on the server:
+
+1. Change your current directory to (webapps)/WEB-INF/classes/
+2. Use the command:
+
+   javap -verbose index_jsp
+
+3. In the first several lines of the output you will see something like:
+
+   minor version: 0
+   major version: 48
+
+Use the table below (from [Réal's How To][javavertable]):
+
+   major  minor Java platform version 
+   45       3           1.0
+   45       3           1.1
+   46       0           1.2
+   47       0           1.3
+   48       0           1.4
+   49       0           1.5
+   50       0           1.6
+
 ### License
 
 Copyright (c) 2011 Gary S. Weaver, released under the [MIT license][lic].
@@ -50,4 +73,5 @@ Copyright (c) 2011 Gary S. Weaver, released under the [MIT license][lic].
 [war]: https://github.com/garysweaver/id/raw/master/dist/notcompiled/id.war
 [jspc]: https://github.com/garysweaver/id/raw/master/dist/compiled/id.war
 [java4snowleopard]: http://tedwise.com/2009/09/25/using-java-1-5-and-java-1-4-on-snow-leopard/
+[javaclassversion]: http://www.rgagnon.com/javadetails/java-0544.html
 [lic]: http://github.com/garysweaver/id/blob/master/LICENSE
