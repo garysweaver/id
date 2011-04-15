@@ -1,21 +1,29 @@
 Id
 =====
 
-A simple Java webapp called "id" that outputs the hostname and domain when you hit it. For example, if the load balanced virtual host you use to made a request to the server were service.acme.net but the actual host was tomcat-01.acme.net the output from making a request to http://service.acme.net/id/ would be tomcat-01.acme.net.
+A simple Java webapp called "id" that outputs the hostname and domain when you hit it.
 
-### About
+e.g. if service.acme.net resolves to tomcat-01.acme.net or tomcat-02.acme.net, a request to http://service.acme.net/id/ would result in either the response (without the quotes) "tomcat-01.acme.net" or "tomcat-02.acme.net", depending on which server served the request.
 
-While there are other better ways of getting information from the running JVM and ensuring your application server is up and running, id is an ok option if you just want a webapp that returns the server's hostname. It is basically just a JSP containing the scriplet:
+### Technical Detail
+
+It is basically just the scriptlet:
 
     <%= java.net.InetAddress.getLocalHost().getHostName() %>
 
+The precompiled version uses JSPC to precompile this to make it just a little bit faster on first hit. This was compiled in Java 1.4 to hopefully be compatible with most environments. If you have any trouble with the precompiled JSP, use the war without precompiled JSP download.
+
 ### Download
 
-Right-click to download [id.war][war].
+War without precompiled JSP: [id.war][war]
+
+OR
+
+War with JSP precompiled with JSPC in Java 1.4: [id.war][jspc]
 
 ### Deploy
 
-Copy it into the webapps directory in Tomcat or the appropriate place in your Java application server (assuming you have it configured to automatically extract/deploy war files).
+Copy it into the webapps directory in Tomcat or the appropriate place in your Java application server, assuming you have it configured to automatically extract/deploy war files.
 
 ### Use
 
@@ -29,9 +37,17 @@ If you need to build it, first install Maven 2 and Java, then use the command:
     
 The built war should be in target/id.war
 
+By default, this compiles the JSP using the current version of Java available to Maven, which can be defined by JAVA_HOME. If you need to build the non-precompiled version, then remove the JSPC plugin section from the pom.xml before building.
+
+e.g. in OS X 10.6 (Snow Leopard), to build with Java 1.4 on newer systems, you must first [install Java 1.4][java4snowleopard], then use the following to set the Java version to 1.4 prior to build (if using bash, the default):
+
+   export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/1.4/Home/
+
 ### License
 
-Copyright (c) 2010 Gary S. Weaver, released under the [MIT license][lic].
+Copyright (c) 2011 Gary S. Weaver, released under the [MIT license][lic].
 
-[war]: https://github.com/garysweaver/id/raw/master/dist/id.war
+[war]: https://github.com/garysweaver/id/raw/master/dist/notcompiled/id.war
+[jspc]: https://github.com/garysweaver/id/raw/master/dist/compiled/id.war
+[java4snowleopard]: http://tedwise.com/2009/09/25/using-java-1-5-and-java-1-4-on-snow-leopard/
 [lic]: http://github.com/garysweaver/id/blob/master/LICENSE
