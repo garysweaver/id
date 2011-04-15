@@ -43,7 +43,7 @@ e.g. in OS X 10.6 (Snow Leopard), to build with Java 1.4 on newer systems, you m
 
     export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/1.4/Home/
 
-If you want to validate the version of Java, you can:
+If you want to validate the version of Java used to compile the JSP file in id.war, you can:
 
 1. Change your current directory to the exploded war's (webapps)/id/WEB-INF/classes/jsp/ or cd to the target directory, unzip/unwar id.war, then change directory into the compiled jsp directory, e.g.:
 
