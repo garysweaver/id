@@ -55,7 +55,7 @@ To validate the version of Java used to compile the JSP:
 2. Use the command (make sure that a version of Java containing javap is in your PATH):
 
         javap -verbose index_jsp
-3. In probably the tenth line of output you will see something like:
+3. In probably the tenth line of output, you possibly will see something like:
 
           minor version: 0
           major version: 48
@@ -70,7 +70,7 @@ To validate the version of Java used to compile the JSP:
         49       0           1.5 (5.0)
         50       0           1.6 (6.0)
         51       0           1.7 (7.0)
-5. If the major/minor version aren't the same or lower/compatible with the version of Java that the application server is using in Tomcat, then you might want to recompile the war with a newer version or use the non-precompiled version.
+5. If the major/minor version aren't the same or lower/compatible with the version of Java that the application server is using in Tomcat, then recompile the war with an appropriate version, or use the non-precompiled version.
 
 ### License
 
