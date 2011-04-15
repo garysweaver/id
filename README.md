@@ -48,12 +48,12 @@ To ensure the class was built in the version less or equal to the version of Jav
 * Change your current directory to (webapps)/WEB-INF/classes/
 * Use the command:
 
-       javap -verbose index_jsp
+        javap -verbose index_jsp
 
 * In the first several lines of the output you will see something like:
 
-       minor version: 0
-       major version: 48
+        minor version: 0
+        major version: 48
 
 Use the table below to determine the version of Java the class was actually compiled in (from [Réal's How To][javaclassversion].):
 
