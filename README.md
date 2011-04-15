@@ -54,19 +54,17 @@ If you want to validate the version of Java, you can:
 
           minor version: 0
           major version: 48
-
 4. Match the major and minor version provided by javap to the table below to ensure the class was built in the version less or equal to the version of Java on the server (thanks to [Réal's How To][javaclassversion]):
 
-    major  minor Java platform version 
-    45       3           1.0
-    45       3           1.1
-    46       0           1.2
-    47       0           1.3
-    48       0           1.4
-    49       0           1.5 (5.0)
-    50       0           1.6 (6.0)
-    51       0           1.7 (7.0)
-
+        major  minor Java platform version 
+        45       3           1.0
+        45       3           1.1
+        46       0           1.2
+        47       0           1.3
+        48       0           1.4
+        49       0           1.5 (5.0)
+        50       0           1.6 (6.0)
+        51       0           1.7 (7.0)
 5. If the major/minor version aren't the same or lower/compatible with the version of Java that the application server is using in Tomcat, then you might want to recompile the war with a newer version or use the non-precompiled version.
 
 ### License
