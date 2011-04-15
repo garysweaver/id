@@ -41,30 +41,31 @@ By default, this compiles the JSP using the current version of Java available to
 
 e.g. in OS X 10.6 (Snow Leopard), to build with Java 1.4 on newer systems, you must first [install Java 1.4][java4snowleopard], then use the following to set the Java version to 1.4 prior to build (if using bash, the default):
 
-   export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/1.4/Home/
+    export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/1.4/Home/
 
 To ensure the class was built in the version less or equal to the version of Java on the server:
 
 1. Change your current directory to (webapps)/WEB-INF/classes/
 2. Use the command:
 
-   javap -verbose index_jsp
+    javap -verbose index_jsp
 
 3. In the first several lines of the output you will see something like:
 
-   minor version: 0
-   major version: 48
+    minor version: 0
+    major version: 48
 
-Use the table below (from [Réal's How To][javavertable]):
+Use the table below (in-part from [Réal's How To][javavertable]):
 
-   major  minor Java platform version 
-   45       3           1.0
-   45       3           1.1
-   46       0           1.2
-   47       0           1.3
-   48       0           1.4
-   49       0           1.5
-   50       0           1.6
+    major  minor Java platform version 
+    45       3           1.0
+    45       3           1.1
+    46       0           1.2
+    47       0           1.3
+    48       0           1.4
+    49       0           1.5 (5.0)
+    50       0           1.6 (6.0)
+    51       0           1.7 (7.0)
 
 ### License
 
