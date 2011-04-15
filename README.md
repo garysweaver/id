@@ -45,13 +45,10 @@ e.g. in OS X 10.6 (Snow Leopard), to build with Java 1.4 on newer systems, you m
 
 To ensure the class was built in the version less or equal to the version of Java on the server:
 
-* Change your current directory to (webapps)/WEB-INF/classes/
-* Use the command:
-
+1. Change your current directory to (webapps)/WEB-INF/classes/
+2. Use the command:
         javap -verbose index_jsp
-
-* In the first several lines of the output you will see something like:
-
+3. In the first several lines of the output you will see something like:
         minor version: 0
         major version: 48
 
